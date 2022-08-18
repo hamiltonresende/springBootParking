@@ -2,8 +2,8 @@ package com.api.springParkingControl.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.rmi.server.UID;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "TB_PARKING_SPOT")
@@ -12,7 +12,7 @@ public class ParkingSpotEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UID id;
+    private UUID id;
 
     @Column(nullable = false, unique = true, length = 10)
     private String parkingSpotNumber;
